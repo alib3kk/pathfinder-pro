@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, Map, GraduationCap, Wallet, Award, ChevronRight } from 'lucide-react';
+import { ArrowRight, CheckCircle, Map, GraduationCap } from 'lucide-react';
 import { demoUniversities, getRoadmap } from './data';
 
 export default function App() {
@@ -22,7 +22,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
-      {/* HEADER */}
       <header className="bg-white border-b px-8 py-4 flex justify-between items-center sticky top-0 z-10">
         <div className="font-bold text-2xl tracking-tighter text-blue-600">Routea.</div>
         <div className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full border border-blue-100 font-medium">
@@ -31,7 +30,6 @@ export default function App() {
       </header>
 
       <main className="max-w-5xl mx-auto p-6">
-        {/* LANDING PAGE */}
         {step === 0 && (
           <div className="flex flex-col items-center justify-center min-h-[70vh] text-center animate-in fade-in zoom-in duration-500">
             <h1 className="text-5xl font-extrabold tracking-tight mb-6 text-gray-900">
@@ -49,7 +47,6 @@ export default function App() {
           </div>
         )}
 
-        {/* PROFILE FORM */}
         {step === 1 && (
           <div className="max-w-2xl mx-auto bg-white rounded-3xl shadow-sm border p-8 animate-in slide-in-from-bottom-4 duration-300">
             <h2 className="text-2xl font-bold mb-6">Профиль абитуриента</h2>
@@ -93,10 +90,8 @@ export default function App() {
           </div>
         )}
 
-        {/* DASHBOARD (Diagnosis, Recommendations, Roadmap) */}
         {step === 2 && (
           <div className="space-y-8 animate-in fade-in duration-500">
-            {/* Header / Diagnosis */}
             <div className="bg-gradient-to-br from-gray-900 to-blue-900 rounded-3xl p-8 text-white shadow-lg flex justify-between items-center">
               <div>
                 <h2 className="text-2xl font-bold mb-2">Ваш персональный маршрут</h2>
@@ -108,7 +103,6 @@ export default function App() {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Left Column: Recommendations & Compare */}
               <div className="lg:col-span-2 space-y-6">
                 <h3 className="text-xl font-bold flex items-center gap-2"><GraduationCap className="text-blue-600"/> Рекомендованные программы</h3>
                 
@@ -140,9 +134,7 @@ export default function App() {
                 )}
               </div>
 
-              {/* Right Column: Roadmap & Next Action */}
               <div className="space-y-6">
-                {/* Next Action Box */}
                 <div className="bg-blue-600 text-white rounded-3xl p-6 shadow-lg transform transition-all hover:scale-[1.02]">
                   <h3 className="text-sm font-bold text-blue-200 uppercase tracking-wider mb-2">Следующий шаг</h3>
                   <p className="text-lg font-semibold leading-tight mb-4">
@@ -153,7 +145,6 @@ export default function App() {
                   </button>
                 </div>
 
-                {/* Timeline */}
                 <div className="bg-white rounded-3xl border p-6 shadow-sm">
                   <h3 className="text-lg font-bold mb-6 flex items-center gap-2"><Map className="text-blue-600" size={20}/> Roadmap поступления</h3>
                   <div className="space-y-6 relative before:absolute before:inset-0 before:ml-[13px] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-300 before:to-transparent">
